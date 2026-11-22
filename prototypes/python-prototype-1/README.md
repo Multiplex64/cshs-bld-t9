@@ -1,0 +1,1 @@
+Basic prototype for the project made in Python
