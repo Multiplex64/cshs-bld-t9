@@ -1,5 +1,10 @@
+from pathlib import Path
 from PIL import Image
 import numpy as np
+
+# This script's own folder, and the example images it reads (shared with test-1)
+here = Path(__file__).resolve().parent
+image_dir = here.parent / "test-1"
 
 # a = Image.open("1.png")
 # print(a.size)
@@ -15,7 +20,7 @@ import numpy as np
 
 images = []
 for i in range(1, 6):
-    images.append(Image.open(f"{i}.png").convert("RGB"))
+    images.append(Image.open(image_dir / f"{i}.png").convert("RGB"))
 print(len(images))
 
 # arr = np.array(images[0])
@@ -30,8 +35,8 @@ print(stacked.shape)
 result = np.mean(stacked, axis=0)
 result = result.astype(np.uint8)
 result = Image.fromarray(result)
-result.save("result_mean.png")
+result.save(here / "result_mean.png")
 result = np.median(stacked, axis=0)
 result = result.astype(np.uint8)
 result = Image.fromarray(result)
-result.save("result.png")
+result.save(here / "result.png")

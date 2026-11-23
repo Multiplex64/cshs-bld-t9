@@ -11,4 +11,4 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-/prototypes/test-1/result*.png
+/prototypes/median-background/result*.png
