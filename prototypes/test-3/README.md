@@ -21,3 +21,6 @@ Saved next to this script (ignored by git):
 pip install -r requirements.txt
 python median.py
 ```
+
+# bug note:
+On the given test images, it occasionally has small image artifacts that occur. see [EXAMPLE_OUTPUT.png](EXAMPLE_OUTPUT.png) with highlighted examples.
