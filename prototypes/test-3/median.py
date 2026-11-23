@@ -4,7 +4,7 @@ import numpy as np
 
 # This script's own folder, and the example images it reads (shared with test-1)
 here = Path(__file__).resolve().parent
-image_dir = here.parent / "test-1"
+image_dir = here.parent.parent / "test-images" / "set1"
 
 # a = Image.open("1.png")
 # print(a.size)

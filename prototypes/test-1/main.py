@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-image_dir = Path(__file__).resolve().parent
+image_dir = Path(__file__).resolve().parent.parent.parent / "test-images" / "set1"
 extensions = {".jpg", ".jpeg", ".png", ".bmp"}
 
 
@@ -42,4 +42,4 @@ with Image.open(paths[0]) as sample:
     width, height = sample.size
 
 avg_rgb = average_image_1d.reshape((height, width, 3)).astype(np.uint8)
-Image.fromarray(avg_rgb).save(image_dir / "average_output.png")
+Image.fromarray(avg_rgb).save(image_dir / "result.png")
